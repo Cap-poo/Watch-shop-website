@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<style>
+    *{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+body{
+    background-color:rgb(184, 179, 179);
+}
+.container{
+    max-width:800px;
+    margin:60px auto;
+    height: 1550px;
+    padding:20px;
+    box-shadow:0 2px 20px rgb(96, 93, 93);
+    background-color:white;
+}
+.header{
+    text-align:center;
+}
+.header h1{
+    margin-bottom:10px;
+}
+.header h3{
+    text-transform:uppercase;
+    font-size:15px;
+    font: weight 550px;
+}
+.image-position{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow:hidden;
+    margin:25p auto;
+    border:15px groove rgb(195, 204, 208);
+}
+.img-position img{
+    width:170px;
+}
+
+.left{
+    padding:30px;
+}
+
+.left ul li{
+    line-height:1.5;
+    margin-left:25px;
+}
+h2{
+    background-color:rgb(184, 179, 179);
+    padding:15px;
+    margin:30px 0;
+    font-size:20px;
+    border-radius:0 50px 50px 0;
+    color:white;
+}
+.right{
+    padding:30px;
+}
+.last h1{
+    background-color:rgb(184, 179, 179);
+    padding:15px;
+    margin:30px ;
+    font-size:20px;
+    border-radius:0 50px 50px 0;
+    color:white;
+}
+.last span{
+    padding:15px;
+    background-color:beige;
+    margin-left:50px;
+   
+}
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="img-position">
+                <img src="../photos/menber2.jpeg" alt="photo">
+            </div>
+            <h1>Chris Khadka</h1>
+            <h3>web developer</h3>
+        </div>
+        <div class="main">
+            <div class="left">
+                <h2>Personal Information</h2>
+                <p><strong>Name:</strong>Chris Khadka</p>
+                <p><strong>Age:</strong>19</p>
+                <p><strong>Email:</strong>Chris@gmail.com</p>
+                <p><strong>Phone:</strong>1234567890</p>
+                <h2>Skills</h2>
+                <ul>
+                    <li>Html css</li>
+                    <li>java</li>
+                    <li>javascript</li>
+                    <li>java</li>
+                    <li>python</li>
+                </ul>
+                <h2>Education</h2>
+                <h3>Bsc in networking and IT Security</h3>
+                <p>Islington college kathmandu</p>
+            </div>
+            <div class="right">
+                <h2> Experience</h2>
+                <h3>xyz company</h3>
+                <p><strong>Position:</strong>Developer</p>
+                <p><strong>Duration:</strong>2years</p>
+            </div>
+            
+            <div class="last">
+                <h1>Hobby</h1>
+                <span>Hobby1</span>
+                <span>Hobby1</span>
+                <span>Hobby1</span>
+                <span>Hobby1</span>
+                <span>Hobby1</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
