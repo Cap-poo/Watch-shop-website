@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="product page" content="products" author="Digi Shrestha">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../css/style.css">
+
+   <!--internal CSS-->
+   <style>
+      *{
+   font-family: Arial, Helvetica, sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   transition: all .2s linear;
+   text-transform: capitalize;
+}
+
+body{
+   background:#2f2929;
+}
+
+.container{
+   max-width: 1200px;
+   margin:0 auto;
+   padding:30px 20px;
+}
+
+.container .title{
+   padding-top: 100px; 
+   font-size: 35px;
+   color:#fff;
+   margin-bottom: 30px;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+.container .products-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap:20px;
+}
+
+.container .products-container .product{
+   text-align: center;
+   padding:30px 20px;
+   background: #fff;
+   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   outline: 1px solid #ccc;
+   outline-offset: -15px;
+   cursor: pointer;
+}
+
+.container .products-container .product:hover{
+   outline: 2px solid #222;
+   outline-offset: 0;
+}
+
+.container .products-container .product img{
+   height: 250px;
+}
+
+.container .products-container .product:hover img{
+   transform: scale(.9);
+}
+
+.container .products-container .product h3{
+   padding:5px 0;
+   font-size: 20px;
+   color:#444;
+}
+
+.container .products-container .product:hover h3{
+   color:#27ae60;
+}
+
+.container .products-container .product .price{
+   font-size: 20px;
+   color:#444;
+}
+
+.container .products-container .product .discount{
+   font-size: 16px;
+   color: #f44336;
+   text-decoration: line-through;
+   margin-top: 5px;
+}
+
+.container .products-container .product .discount-label {
+   font-size: 14px;
+   color: #f44336;
+   font-weight: bold;
+   margin-top: 5px;
+}
+
+.products-preview{
+   position: fixed;
+   top:0; left:0;
+   min-height: 100vh;
+   width: 100%;
+   background: rgba(0,0,0,.8);
+   display: none;
+   align-items: center;
+   justify-content: center;
+}
+
+.products-preview .preview{
+   display: none;
+   padding:20px;
+   text-align: center;
+   background: #fff;
+   position: relative;
+   margin:20px;
+   width: 400px;
+}
+
+.products-preview .preview.active{
+   display: inline-block;
+}
+
+.products-preview .preview img{
+   height: 300px;
+}
+
+.products-preview .preview .fa-times{
+   position: absolute;
+   top:10px; right:15px;
+   cursor: pointer;
+   color:#444;
+   font-size: 40px;
+}
+
+.products-preview .preview .fa-times:hover{
+   transform: rotate(90deg);
+}
+
+.products-preview .preview h3{
+   color:#444;
+   padding:5px 0;
+   font-size: 25px;
+}
+
+.products-preview .preview .stars{
+   color: #f1c40f;
+   font-size: 18px;
+   margin: 10px 0;
+}
+
+.products-preview .preview p{
+   line-height: 1.5;
+   padding:10px 0;
+   font-size: 16px;
+   color:#777;
+}
+
+.products-preview .preview .price{
+   padding:10px 0;
+   font-size: 25px;
+   color:#27ae60;
+}
+
+.products-preview .preview .discount{
+   font-size: 18px;
+   color: #f44336;
+   text-decoration: line-through;
+}
+
+.products-preview .preview .discount-label {
+   font-size: 16px;
+   color: #f44336;
+   font-weight: bold;
+}
+
+.products-preview .preview .buttons{
+   display: flex;
+   gap:15px;
+   flex-wrap: wrap;
+   margin-top: 10px;
+}
+
+.products-preview .preview .buttons a{
+   flex:1 1 160px;
+   padding:10px;
+   font-size: 18px;
+   color:#444;
+   border:1px solid #444;
+}
+
+.products-preview .preview .buttons a.cart{
+   background: #444;
+   color:#fff;
+}
+
+.products-preview .preview .buttons a.cart:hover{
+   background: #111;
+}
+
+.products-preview .preview .buttons a.buy:hover{
+   background: #444;
+   color:#fff;
+}
+
+.cancel-btn {
+   margin-top: 1rem;
+   padding: 10px 20px;
+   font-size: 18px;
+   background-color: #f44336;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.2s;
+}
+
+.cancel-btn:hover {
+   background-color: #d32f2f;
+}
+
+   </style>
+</head>
+<body>
+    <div id="nav">
+        <img src="../img/homepage/logo.jpg">
+        <h4><a href="../home.html">HOME</a></h4>
+        <h4><a href="../html/blog.html">BLOG</a></h4>
+        <h4><a href="../html/product.html">PRODUCTS</a></h4>
+        <h4><a href="../html/aboutus.html">ABOUT US</a></h4>
+        <h4><a href="../html/research.html">RESEARCH</a></h4>
+    </div>
+   
+<div class="container">
+
+   <h3 class="title"> Our Products </h3>
+
+   <div class="products-container">
+
+      <div class="product" data-name="p-1">
+         <img src="../img/productpage/p1.webp" alt="">
+         <h3>Classic Leather Watch</h3>
+         <div class="price">$10000.00</div>
+         <div class="discount">$12000.00</div>
+         <div class="discount-label">Discount: 16% off</div>
+      </div>
+
+      <div class="product" data-name="p-2">
+         <img src="../img/productpage/p2.webp" alt="">
+         <h3> Sporty Stainless Steel Watch</h3>
+         <div class="price">$5000.00</div>
+         <div class="discount">$6000.00</div>
+         <div class="discount-label">Discount: 16% off</div>
+      </div>
+
+      <div class="product" data-name="p-3">
+         <img src="../img/productpage/p3.webp" alt="">
+         <h3>Luxury Gold Watch</h3>
+         <div class="price">$70000.00</div>
+         <div class="discount">$80000.00</div>
+         <div class="discount-label">Discount: 12% off</div>
+      </div>
+
+      <div class="product" data-name="p-4">
+         <img src="../img/productpage/p4.jpg" alt="">
+         <h3>Minimalist Quartz Watch</h3>
+         <div class="price">$25000.00</div>
+         <div class="discount">$30000.00</div>
+         <div class="discount-label">Discount: 16% off</div>
+      </div>
+
+      <div class="product" data-name="p-5">
+         <img src="../img/productpage/p5.webp" alt="">
+         <h3>Sports Chronograph Watch</h3>
+         <div class="price">$10000.00</div>
+         <div class="discount">$12000.00</div>
+         <div class="discount-label">Discount: 16% off</div>
+      </div>
+
+      <div class="product" data-name="p-6">
+         <img src="../img/productpage/p6.webp" alt="">
+         <h3>Smart Digital Watch</h3>
+         <div class="price">$9000.00</div>
+         <div class="discount">$10000.00</div>
+         <div class="discount-label">Discount: 10% off</div>
+      </div>
+
+   </div>
+
+</div>
+
+<div class="products-preview">
+
+   <div class="preview" data-target="p-1">
+      <i class="fas fa-times"></i>
+      <img src="../img/productpage/p1.webp" alt="">
+      <h3>Classic Leather Watch</h3>
+      <div class="stars">
+         ★★★★☆ <span style="color: #111;">(4.2/5 - 250 reviews)</span>
+      </div>
+      <p> A timeless classic with a sleek leather strap and minimalist design. Perfect for both formal and casual occasions.</p>
+      <div class="price">$10000.00</div>
+      <div class="discount">$12000.00</div>
+      <div class="discount-label">Discount: 16% off</div>
+      <div class="buttons">
+         <a href="../html/form.html" class="buy">buy now</a>
+         <a href="#" class="cart">add to cart</a>
+      </div>
+      <button class="cancel-btn">Cancel</button>
+   </div>
+
+   <div class="preview" data-target="p-2">
+      <i class="fas fa-times"></i>
+      <img src="../img/productpage/p2.webp" alt="">
+      <h3>Sporty Stainless Steel Watch</h3>
+      <div class="stars">
+         ★★★☆☆ <span style="color: #111;">(3.5/5 - 180 reviews)</span>
+      </div>
+      <p>Built for active individuals, this sporty stainless steel watch features water resistance and a durable design for everyday wear.</p>
+      <div class="price">$5000.00</div>
+      <div class="discount">$6000.00</div>
+      <div class="discount-label">Discount: 16% off</div>
+      <div class="buttons">
+         <a href="../html/form.html" class="buy">buy now</a>
+         <a href="#" class="cart">add to cart</a>
+      </div>
+      <button class="cancel-btn">Cancel</button>
+   </div>
+
+   <div class="preview" data-target="p-3">
+      <i class="fas fa-times"></i>
+      <img src="../img/productpage/p3.webp" alt="">
+      <h3>Luxury Gold Watch</h3>
+      <div class="stars">
+         ★★★★★ <span style="color: #111;">(4.8/5 - 300 reviews)</span>
+      </div>
+      <p>An elegant gold-plated watch that exudes luxury and sophistication. A must-have for special occasions and formal settings.</p>
+      <div class="price">$70000.00</div>
+      <div class="discount">$80000.00</div>
+      <div class="discount-label">Discount: 12% off</div>
+      <div class="buttons">
+         <a href="../html/form.html" class="buy">buy now</a>
+         <a href="#" class="cart">add to cart</a>
+      </div>
+      <button class="cancel-btn">Cancel</button>
+   </div>
+
+   <div class="preview" data-target="p-4">
+      <i class="fas fa-times"></i>
+      <img src="../img/productpage/p4.jpg" alt="">
+      <h3>Minimalist Quartz Watch</h3>
+      <div class="stars">
+         ★★★★☆ <span style="color: #111;">(4.0/5 - 200 reviews)</span>
+      </div>
+      <p> A clean and modern quartz watch with a minimalist face. The perfect accessory for any professional wardrobe.</p>
+      <div class="price">$25000.00</div>
+      <div class="discount">$30000.00</div>
+      <div class="discount-label">Discount: 16% off</div>
+      <div class="buttons">
+         <a href="../html/form.html" class="buy">buy now</a>
+         <a href="#" class="cart">add to cart</a>
+      </div>
+      <button class="cancel-btn">Cancel</button>
+   </div>
+
+   <div class="preview" data-target="p-5">
+      <i class="fas fa-times"></i>
+      <img src="../img/productpage/p5.webp" alt="">
+      <h3>Sports Chronograph Watch</h3>
+      <div class="stars">
+         ★★★☆☆ <span style="color: #111;">(3.2/5 - 150 reviews)</span>
+      </div>
+      <p> Ideal for sports enthusiasts, this chronograph watch has multiple dials, a tachymeter, and a durable strap for high-performance use.</p>
+      <div class="price">$10000.00</div>
+      <div class="discount">$12000.00</div>
+      <div class="discount-label">Discount: 16% off</div>
+      <div class="buttons">
+         <a href="../html/form.html" class="buy">buy now</a>
+         <a href="#" class="cart">add to cart</a>
+      </div>
+      <button class="cancel-btn">Cancel</button>
+   </div>
+
+   <div class="preview" data-target="p-6">
+      <i class="fas fa-times"></i>
+      <img src="../img/productpage/p6.webp" alt="">
+      <h3>Smart Digital Watch</h3>
+      <div class="stars">
+         ★★★★☆ <span style="color: #111;">(4.5/5 - 220 reviews)</span>
+      </div>
+      <p>A cutting-edge digital smartwatch with fitness tracking, heart rate monitoring, and notifications, all in a sleek, modern design.</p>
+      <div class="price">$9000.00</div>
+      <div class="discount">$10000.00</div>
+      <div class="discount-label">Discount: 10% off</div>
+      <div class="buttons">
+         <a href="../html/form.html" class="buy">buy now</a>
+         <a href="#" class="cart">add to cart</a>
+      </div>
+      <button class="cancel-btn">Cancel</button>
+   </div>
+
+</div>
+<!-- Footer Section -->
+<div id="footer">
+   <div id="f1">
+       <img src="../img/homepage/logo.jpg" alt="Footer Image" />
+   </div>
+   <div id="f2">
+       <h3>Fast Delivery</h3>
+       <h3>After Sales Services</h3>
+       <h3>Good Customer Reviews</h3>
+   </div>
+   <div id="f3">
+       <h3><a href="../html/aboutus.html">About Us</a></h3>
+       <h3><a href="../html/blog.html">Blogs</a></h3>
+       <h3><a href="../html/research.html">Researches</a></h3>
+   </div>
+   <div id="f4">
+       <h4>
+           Kathmandu, Nepal <br />
+           Basundhara <br />
+           43000 <br />
+           Contact Us <br />
+           TEL: 0208 309 0181 <br />
+           GET DIRECTIONS <br />
+       </h4>
+   </div>
+</div>
+   <!-- custom js file link  -->
+   <script src="../js/script.js" defer></script>
+
+</body>
+</html>
