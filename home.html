@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+
+    <!--Using Meta tags-->
+    <meta charset="UTF-8">
+    <meta name="WatchMe.com" content="Home-Page" auther="Mausam Bhattarai">
+
+    <!--title (Watchme.com)-->
+    <title>WatchMe</title>
+
+    <!--External CSS link-->
+    <link rel="stylesheet" href="../Development/css/style.css">
+
+    <!--Internal CSS-->
+    <style>
+
+        /*Styling for background video*/
+ 
+        video {
+            
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
+            position: fixed;
+        }
+
+        /*Styling for main */
+        #main {
+            height: 100%;
+            padding-top: 300px;
+            position: relative;
+            background-color: #0000007c;
+        }
+
+        /*page1 styling*/
+        #page1 {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            z-index: 10;
+        }
+        #page1 h1 {
+            font-size: 50px;
+            font-weight: 900;
+            position: relative;
+        }
+        #page1 h1::before {
+            content: "PREMIUM. AFFORDABLE. LUXURY";
+            position: absolute;
+            color: #000;
+            top: -5px;
+            left: -5px;
+            -webkit-text-stroke: 1.5px #f1ab0a;
+            z-index: -1;
+        }
+        #page1 h2 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        #page1 p {
+            font-size: 20px;
+            font-weight: 500;
+            width: 40%;
+        }
+
+        /*inside main button(cn) Styling*/
+        #cn{
+            width: 160px;
+            height: 50px;
+            background: #f1ab0a;
+            border: none;
+            margin-bottom: 10px;
+            margin-left: 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #cn a{
+            padding-top: 50px;
+            text-decoration: none;
+            transition: .3s ease;
+        }
+
+        /*Adding a hover effect to the button (cn)*/
+        #cn:hover{
+            background-color: #fff
+        }
+
+        /*Styling for why choose us part*/
+        #choose-us {
+            margin-top: 200px;
+            background-color: #343232;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            padding-top: 50px;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+            justify-content: space-around;
+            border-radius: 3%;
+        }
+        #choose-us img {
+            height: 220px;
+            width: 220px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        #choose-us-in {
+            width: 50%;
+            text-align: center;
+        }
+        #choose-us-in h3 {
+            font-size: 54px;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+        #choose-us-in p {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        /*styling for blog page outlook*/
+        #blogs {
+            text-align: center;
+            padding: 20px;
+            background-color: #121212; /* Dark background */
+            color: white;
+        }
+
+        .blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .blog-post {
+            width: 300px;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 8px;
+        }
+
+        .blog-post h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .blog-post p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* See More Button */
+        .see-more-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #f1ab0a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .see-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /*Reference section outline styling*/
+        #reference-section {
+            text-align: center;
+            padding: 40px;
+            background-color: #121212; 
+            color: white;
+        }
+
+        #reference-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        #reference-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        #reference-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        #reference-box1, #reference-box2, #reference-box3 {
+            width: 300px;
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: black;
+        }
+
+        #reference-box1 img, #reference-box2 img, #reference-box3 img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        #reference-box1 h4, #reference-box2 h4, #reference-box3 h4 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        #reference-box1 p, #reference-box2 p, #reference-box3 p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /*  Button Styling */
+        #see-more-btn1, #see-more-btn2, #see-more-btn3 {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #f1ab0a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        #see-more-btn1:hover, #see-more-btn2:hover, #see-more-btn3:hover {
+            background: #0056b3;
+        }
+
+        /*now product page outline*/
+        #product-section {
+            text-align: center;
+            padding: 40px;
+            background-color: #121212;
+            color: black;
+        }
+
+        #product-section h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        #product-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color:#b9b9b9;
+        }
+
+        #product-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        #product-box1, #product-box2, #product-box3 {
+            width: 300px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        #product-box1:hover, #product-box2:hover, #product-box3:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        #product-box1 a, #product-box2 a, #product-box3 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #product-box1 img, #product-box2 img, #product-box3 img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        #product-box1 h4, #product-box2 h4, #product-box3 h4 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #222;
+        }
+
+        #product-box1 p, #product-box2 p, #product-box3 p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* About Us Section Styling */
+        #about-us-section {
+            text-align: center;
+            padding: 40px;
+            background-color: #121212;
+            color: white;
+        }
+
+        #about-us-section h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        #about-us-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        #about-us-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            width: 300px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            color: black;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .team-member a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .team-member h4 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #222;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #000000;
+        }
+
+        #mission-statement, #values {
+            margin-top: 40px;
+            text-align: center; 
+            padding: 20px;
+            background-color: #343232;
+            border-radius: 10px;
+            color: white;
+            width: 95%; 
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+
+        #mission-statement h2, #values h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        #mission-statement p {
+            font-size: 16px;
+            color: #ccc;
+            text-align: center;
+        }
+
+        #values table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        #values table th, #values table td {
+            padding: 15px; 
+            border: 1px solid #555;
+            text-align: center;
+        }
+
+        #values table th {
+            background-color: #f1ab0a;
+            color: #121212;
+            font-size: 18px; 
+        }
+
+        #values table td {
+            background-color: #444;
+            color: #ccc;
+            font-size: 16px; 
+        }   
+        
+        
+    </style>
+
+ </head>
+ <body>
+
+    <!--Creating a navigation bar-->
+    <div id="nav">
+        <img src="../Development/img/homepage/logo.jpg">
+        <h4><a href="../Development/home.html">HOME</a></h4>
+        <h4><a href="../Development/html/blog.html">BLOG</a></h4>
+        <h4><a href="../Development/html/product.html">PRODUCTS</a></h4>
+        <h4><a href="../Development/html/aboutus.html">ABOUT US</a></h4>
+        <h4><a href="../Development/html/research.html">RESEARCH</a></h4>
+    </div>
+    
+    <!--Background autoplaying v-->
+    <video autoplay loop muted src="../Development/video.mp4"></video>
+
+    <!--Creating a main container-->
+    <div id="main">
+        <div id="page1">
+            <h1>PREMIUM. AFFORDABLE. LUXURY</h1>
+            <h2>WELCOME TO WATCH'ME : COLLECTION OF WATCHES</h2>
+            <p>This is the palce where you can find premium and luxury watches at reasonable prices</p>
+            <br>
+
+            <!--creating a button and using the Inline CSS along side anchor tag-->
+            <button id="cn"><a href="../Development/html/product.html" style="color: black;">SHOP NOW</a></button>
+        </div>
+        <div id="choose-us">
+            <img src="../Development/img/homepage/cusService.jpg" alt="image"/>
+                <div id="choose-us-in">
+                  <h3>WHY CHOOSE US</h3>
+                  <p>
+                    We provide you with the best after sales services. We have 100+ happy customer reviews and customers are satisfied 
+                    the services we provide after the purchase and before purchase. We provide fast and safe delivery services. Be secure
+                    that the product that you order will reach you in a safe manner.
+                  </p>
+                </div>
+            <img src="../Development/img/homepage/delivery.jpg" alt="image"/>
+        </div>
+
+        <!--outlook of blog page-->
+        <div id="blogs">
+            <h1>Some Blogs</h1> 
+            <div class="blog-container">
+        
+                <div class="blog-post">
+                    <a href="../Development/html/blog.html">
+                        <img src="../Development/img/blogpage/a1.jpg" alt="Technology & New Design">
+                    </a>
+                    <h3>Technology & New Design</h3>
+                    <p>Explore the latest advancements in technology and innovative design trends shaping the future.</p>
+                    <a href="../Development/html/blog.html" class="see-more-btn">See More</a>
+                </div>
+        
+                <div class="blog-post">
+                    <a href="../Development/html/blog.html">
+                        <img src="../Development/img/blogpage/a2.jpg" alt="AI Revolution">
+                    </a>
+                    <h3>AI Revolution</h3>
+                    <p>Discover how AI is transforming industries and reshaping human interactions. Now a days AI is everywhere</p>
+                    <a href="../Development/html/blog.html" class="see-more-btn">See More</a>
+                </div>
+        
+                <div class="blog-post">
+                    <a href="../Development/html/blog.html">
+                        <img src="../Development/img/blogpage/a3.jpg" alt="Web Development Trends">
+                    </a>
+                    <h3>Web Development Trends</h3>
+                    <p>Stay updated with the latest web technologies and development best practices.</p>
+                    <a href="../Development/html/blog.html" class="see-more-btn">See More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Outline of references pages-->
+        <div id="reference-section">
+            <h1>Reference Page</h1>
+            <p>Here's a quick look at the references we used while designing our website, including inspirations for themes, layouts, and styles.</p>
+        
+            <div id="reference-container">
+                <div id="reference-box1">
+                    <img src="../Development/img/researchpage/home1.png" alt="Dark Theme Website">
+                    <h4>Dark Themed Website</h4>
+                    <p>Inspired by modern black-themed designs, we adopted a sleek and elegant look. Black theme seems premium also</p>
+                    <a href="../Development/html/research.html" id="see-more-btn1">See More</a>
+                </div>
+        
+                <div id="reference-box2">
+                    <img src="../Development/img/researchpage/blog1.png" alt="Blog Design">
+                    <h4>Blog Page Design</h4>
+                    <p>We designed our blog layout based on user-friendly and visually appealing blog structures.</p>
+                    <a href="../Development/html/research.html" id="see-more-btn2">See More</a>
+                </div>
+        
+                <div id="reference-box3">
+                    <img src="../Development/img/researchpage/pro1.png" alt="Footer Reference">
+                    <h4>Footer Structure</h4>
+                    <p>We structured our footer to include relevant details like contact information and services.</p>
+                    <a href="../Development/html/research.html" id="see-more-btn3">See More</a>
+                </div>
+            </div>
+        </div>
+
+        <!--outline of product page--> 
+        <div id="product-section">
+            <h1>Our Product Highlights</h1>
+            <p>Explore some of our featured products. Click on any item to view more details.</p>
+        
+            <div id="product-container">
+                <div id="product-box1">
+                    <a href="../Development/html/product.html">
+                        <img src="../Development/img/productpage/p1.webp" alt="Luxury Watch">
+                        <h4>Luxury Watch</h4>
+                        <p>Timeless design with premium craftsmanship.</p>
+                    </a>
+                </div>
+        
+                <div id="product-box2">
+                    <a href="../Development/html/product.html">
+                        <img src="../Development/img/productpage/p2.webp" alt="Smart Watch">
+                        <h4>Smart Watch</h4>
+                        <p>Stay connected with the latest technology.</p>
+                    </a>
+                </div>
+        
+                <div id="product-box3">
+                    <a href="../Development/html/product.html">
+                        <img src="../Development/img/productpage/p3.webp" alt="Sports Watch">
+                        <h4>Sports Watch</h4>
+                        <p>Designed for performance and durability.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- About Us Section -->
+        <div id="about-us-section">
+            <h1>About Us</h1>
+            <p>Learn more about our team, mission, and the values that drive us to provide you with the best watches and services.</p>
+
+            <div id="about-us-container">
+                <!-- Team Member 1 -->
+                <div id="team-member1" class="team-member">
+                    <a href="../Development/html/aboutus.html">
+                        <img src="../Development/photos/member5.jpg" alt="Team Member 1">
+                        <h4>Digi Shrestha</h4>
+                        <p>Co-Founder & CEO</p>
+                        <p>Digi is passionate about luxury watches and ensuring customer satisfaction.</p>
+                    </a>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div id="team-member2" class="team-member">
+                    <a href="../Development/html/aboutus.html">
+                        <img src="../Development/photos/mem3.jpeg" alt="Team Member 2">
+                        <h4>Dorje Tamang</h4>
+                        <p>Head of Operations</p>
+                        <p>Dorje oversees the day-to-day operations and ensures smooth delivery services.</p>
+                    </a>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div id="team-member3" class="team-member">
+                    <a href="../Development/html/aboutus.html">
+                        <img src="../Development/photos/mem4.jpeg" alt="Team Member 3">
+                        <h4>Poonam Maharjan</h4>
+                        <p>Lead Designer</p>
+                        <p>Poonam is responsible for the innovative designs and aesthetics of our products.</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mission Statement -->
+            <div id="mission-statement">
+                <h2>Our Mission</h2>
+                <p>At WatchMe, our mission is to provide premium, affordable, and luxurious watches to our customers. We strive to deliver exceptional quality and service, ensuring that every customer feels valued and satisfied.</p>
+            </div>
+
+            <!-- Values -->
+            <div id="values">
+                <h2>Our Values</h2>
+                <table>
+                    <tr>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Quality</strong></td>
+                        <td>We are committed to offering only the highest quality products.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Customer Satisfaction</strong></td>
+                        <td>Your satisfaction is our top priority.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Innovation</strong></td>
+                        <td>We continuously innovate to bring you the latest in watch technology and design.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integrity</strong></td>
+                        <td>We conduct our business with honesty and transparency.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div id="footer">
+            <div id="f1">
+                <img src="../Development/img/homepage/logo.jpg" alt="Footer Image" />
+            </div>
+            <div id="f2">
+                <h3>Fast Delivery</h3>
+                <h3>After Sales Services</h3>
+                <h3>Good Customer Reviews</h3>
+            </div>
+            <div id="f3">
+                <h3><a href="../Development/html/aboutus.html">About Us</a></h3>
+                <h3><a href="../Development/html/blog.html">Blogs</a></h3>
+                <h3><a href="../Development/html/research.html">Researches</a></h3>
+            </div>
+            <div id="f4">
+                <h4>
+                    Kathmandu, Nepal <br />
+                    Basundhara <br />
+                    43000 <br />
+                    Contact Us <br />
+                    TEL: 0208 309 0181 <br />
+                    GET DIRECTIONS <br />
+                </h4>
+            </div>
+        </div>
+
+        
+        
+    </div>    
+
+
+    
+ </body>
+</html>
