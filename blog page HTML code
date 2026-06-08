@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog Page</title>
+    <meta content="Coursework Blog Page" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="Poonam Maharjan" content="Blog Page" />
+    <meta http-equiv="refresh" content="60" />
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            background: #000; 
+            color: #fff; 
+        }
+
+        .container {
+            padding-top: 120px; 
+            text-align: center;
+        }
+
+        .column-card {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 15px 0;
+            font-size: 24px;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .card a {
+            color: #e4b64b;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .horizontal-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .hcard {
+            background: #1a1a1a; 
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            width: 80%;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hcard img {
+            width: 40%;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .hcard .text {
+            width: 60%;
+        }
+
+        .hcard h3 {
+            margin: 0 0 15px 0;
+            font-size: 24px;
+        }
+
+        .hcard p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Clock Styling */
+        #clock {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 1.2rem;
+            color: #e4b64b;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Dynamic Clock -->
+    <div id="clock"></div>
+
+    <!-- Navigation Bar -->
+    <div id="nav">
+        <img src="../img/homepage/logo.jpg" alt="Logo">
+        <h4><a href="../home.html">HOME</a></h4>
+        <h4><a href="../html/blog.html">BLOG</a></h4>
+        <h4><a href="../html/product.html">PRODUCTS</a></h4>
+        <h4><a href="../html/aboutus.html">ABOUT US</a></h4>
+        <h4><a href="../html/research.html">RESEARCH</a></h4>
+    </div>
+
+    <!-- Column Section -->
+    <div class="container">
+        <div class="column-card">
+            <div class="card">
+                <img src="../img/blogpage/a1.jpg" alt="Picture of Red watch" class="card-img">
+                <h3>Technology & <br>New Design</h3>
+                <p>- Smart Features <br>- AI and Customization <br>- Advanced Manufacturing Techniques <br><a href="../html/page.html">See More</a></p>
+            </div>
+            <div class="card">
+                <img src="../img/blogpage/a2.jpg" alt="Picture of watch" class="card-img">
+                <h3>Technology <br>and Sales</h3>
+                <p>- Rising Demand for Smartwatches <br>- E-Commerce Expansion <br>- Luxury Watch Market Growth <br><a href="../html/page.html">See More</a></p>
+            </div>
+            <div class="card">
+                <img src="../img/blogpage/b3.jpg" alt="Picture of watch" class="card-img">
+                <h3>Consumer Trends on Watch</h3>
+                <p>- Luxury and High-End Watches on Demand <br>- Self Customization <br><a href="../html/page.html">See More</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Horizontal Section -->
+    <section class="horizontal">
+        <div class="horizontal-container">
+            <div class="hcard">
+                <img src="../img/blogpage/a3.jpg" alt="Picture of watch" class="hcard-img">
+                <div class="text">
+                    <h3>Impact of Technology in Watch Industry</h3>
+                    <p>- Difference in Smartwatches and Traditional Watches <br>- Design and Manufacturing <br>- E-Commerce and Online Sales <br>- The Impact of AI and Big Data <br>- Wearable Technology Beyond Timekeeping <br>- Revolutionizing Watch Production</p>
+                </div>
+            </div>
+            <div class="hcard">
+                <img src="../img/blogpage/b1.jpg" alt="Picture of watch" class="hcard-img">
+                <div class="text">
+                    <h3>Positive Impact on Watch Industries</h3>
+                    <p>- Innovation and Design Possibilities <br>- Next-Level Functionality <br>- Better Accessibility <br>- Enhanced User Experience <br>- Luxury Meets Technology <br>- Sustainability and Eco-Friendly Materials</p>
+                </div>
+            </div>
+            <div class="hcard">
+                <img src="../img/blogpage/b2.jpg" alt="Picture of watch" class="hcard-img">
+                <div class="text">
+                    <h3>Negative Impact on Watch Industries</h3>
+                    <p>- Threat to Traditional Watchmaking Industries <br>- Shorter Lifecycle of Product <br>- Security and Privacy Risks <br>- Lack of Human Touch <br>- Overemphasis on Technology over Aesthetics <br>- Market Saturation and Brand Differentiation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <div id="f1">
+            <img src="../img/homepage/logo.jpg" alt="Footer Image">
+        </div>
+        <div id="f2">
+            <h3>Fast Delivery</h3>
+            <h3>After Sales Services</h3>
+            <h3>Good Customer Reviews</h3>
+        </div>
+        <div id="f3">
+            <h3><a href="../html/aboutus.html">About Us</a></h3>
+            <h3><a href="../html/blog.html">Blogs</a></h3>
+            <h3><a href="../html/research.html">Researches</a></h3>
+        </div>
+        <div id="f4">
+            <h4>
+                Kathmandu, Nepal <br />
+                Basundhara <br />
+                43000 <br />
+                Contact Us <br />
+                TEL: 0208 309 0181 <br />
+                GET DIRECTIONS <br />
+            </h4>
+        </div>
+    </div>
+
+    <!-- JavaScript for Dynamic Clock -->
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Initialize the clock immediately
+        updateClock();
+    </script>
+</body>
+</html>
