@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="by Dorje">
+
+    <!-- title of the webpage-->
+    <title>Our Team Mates</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        /* Team Section Styling */
+        .team {
+            padding: 150px 5%;
+            width: 100%;
+            background: #212121;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-bottom: 50px;
+        }
+
+        /* Container Holding Team Members */
+        .team-content {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Member Boxes */
+        .box {
+            width: 220px;
+            padding: 20px;
+            background: #fff;
+            border: 8px solid #ececec;
+            border-radius: 15px;
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Hover Effect */
+        .box:hover {
+            transform: translateY(-10px);
+            cursor: pointer;
+        }
+
+        /* Team Member Images */
+        .box img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        /* Member Name */
+        .box h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #172c66;
+            margin-bottom: 5px;
+        }
+
+        /* Member ID */
+        .box h5 {
+            font-size: 14px;
+            font-weight: 500;
+            color: burlywood;
+        }
+
+        /* Centered Section Title */
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .center span {
+            font-size: 36px;
+            color: #6e6658;
+        }
+
+        .center h1 {
+            color: #73836a;
+            font-size: 48px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* Contact Us Section */
+        .contact-section {
+            padding: 50px 5%;
+            background: #2f2929;
+            color: #fff;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .contact-section form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-section input,
+        .contact-section textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+            color: #000;
+        }
+
+        .contact-section textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .contact-section button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #f1ab0a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-section button:hover {
+            background: #e4b64b;
+        }
+
+        .error-message {
+            color: #f44336;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        /* Footer Styling */
+        #footer {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 20px 10px;
+            background-color: #121212;
+            color: white;
+            border-top: 2px solid #f1ab0a;
+            margin-top: 0;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <img src="../img/homepage/logo.jpg">
+        <h4><a href="../home.html">HOME</a></h4>
+        <h4><a href="../html/blog.html">BLOG</a></h4>
+        <h4><a href="../html/product.html">PRODUCTS</a></h4>
+        <h4><a href="../html/aboutus.html">ABOUT US</a></h4>
+        <h4><a href="../html/research.html">RESEARCH</a></h4>
+    </div>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="center">
+            <!-- heading-->
+            <span><i><b>WatchMe.</b></i></span>
+            <h1>Our Team Members</h1>
+        </div>
+
+        <!-- Container for Member Boxes -->
+        <div class="team-content">
+            <!-- Member 1 Box -->
+            <div class="box">
+                <a href="../html/mausam.html">
+                    <img src="../photos/member1.jpeg" alt="Mausam Bhattarai">
+                </a>
+                <a href="../html/mausam.html">
+                    <h3>Mausam Bhattarai</h3>
+                </a>
+                <h5>np01nt4s210153</h5>
+            </div>
+
+            <!-- Member 2 Box -->
+            <div class="box">
+                <a href="../html/chris.html">
+                    <img src="../photos/menber2.jpeg" alt="Krish Khadka">
+                </a>
+                <a href="../html/chris.html">
+                    <h3>Krish Khadka</h3>
+                </a>
+                <h5>np01nta220213</h5>
+            </div>
+
+            <!-- Member 3 Box -->
+            <div class="box">
+                <a href="../html/dorje.html">
+                    <img src="../photos/mem3.jpeg" alt="Dorje Lama">
+                </a>
+                <a href="../html/dorje.html">
+                    <h3>Dorje Lama</h3>
+                </a>
+                <h5>np01nt4a240146</h5>
+            </div>
+
+            <!-- Member 4 Box -->
+            <div class="box">
+                <a href="../html/poonam.html">
+                    <img src="../photos/mem4.jpeg" alt="Poonam Maharjan">
+                </a>
+                <a href="../html/poonam.html">
+                    <h3>Poonam Maharjan</h3>
+                </a>
+                <h5>np01nt4a240140</h5>
+            </div>
+
+            <!-- Member 5 Box -->
+            <div class="box">
+                <a href="../html/digi.html">
+                    <img src="../photos/member5.jpg" alt="Digi Shrestha">
+                </a>
+                <a href="../html/digi.html">
+                    <h3>Digi Shrestha</h3>
+                </a>
+                <h5>np01nt4a240129</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <div class="error-message" id="nameError">Please enter your name.</div>
+
+            <input type="email" id="email" placeholder="Your Email" required>
+            <div class="error-message" id="emailError">Please enter a valid email address.</div>
+
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <div class="error-message" id="messageError">Please enter your message.</div>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <div id="footer">
+        <div id="f1">
+            <img src="../img/homepage/logo.jpg" alt="Footer Image">
+        </div>
+        <div id="f2">
+            <h3>Fast Delivery</h3>
+            <h3>After Sales Services</h3>
+            <h3>Good Customer Reviews</h3>
+        </div>
+        <div id="f3">
+            <h3><a href="../html/aboutus.html">About Us</a></h3>
+            <h3><a href="../html/blog.html">Blogs</a></h3>
+            <h3><a href="../html/research.html">Researches</a></h3>
+        </div>
+        <div id="f4">
+            <h4>
+                Kathmandu, Nepal <br />
+                Basundhara <br />
+                43000 <br />
+                Contact Us <br />
+                TEL: 0208 309 0181 <br />
+                GET DIRECTIONS <br />
+            </h4>
+        </div>
+    </div>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form inputs
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Reset error messages
+            document.getElementById('nameError').style.display = 'none';
+            document.getElementById('emailError').style.display = 'none';
+            document.getElementById('messageError').style.display = 'none';
+
+            // Validate name
+            if (name === '') {
+                document.getElementById('nameError').style.display = 'block';
+                return;
+            }
+
+            // Validate email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                return;
+            }
+
+            // Validate message
+            if (message === '') {
+                document.getElementById('messageError').style.display = 'block';
+                return;
+            }
+
+            // If all validations pass, submit the form
+            alert('Thank you for contacting us! We will get back to you soon.');
+            document.getElementById('contactForm').reset(); // Clear the form
+        });
+    </script>
+</body>
+
+</html>
